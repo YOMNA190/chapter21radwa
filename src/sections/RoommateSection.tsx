@@ -28,16 +28,16 @@ export default function RoommateSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12"
         >
           <h2 
-            className="font-arabic text-4xl sm:text-5xl font-bold mb-3"
+            className="font-arabic text-3xl sm:text-5xl font-bold mb-3"
             style={{ color: "var(--text-primary)" }}
           >
             عصر كوارث السكن
           </h2>
           <p 
-            className="font-heading text-xl"
+            className="font-heading text-lg sm:text-xl"
             style={{ color: "var(--text-secondary)" }}
           >
             The Roommate Disaster Era
@@ -45,7 +45,7 @@ export default function RoommateSection() {
         </motion.div>
 
         {/* Memory Cards */}
-        <div className="flex gap-5 overflow-x-auto pb-6 px-4 justify-start lg:justify-center">
+        <div className="flex gap-4 sm:gap-5 overflow-x-auto pb-6 px-2 sm:px-4 justify-start lg:justify-center scrollbar-hide">
           {memories.map((memory, index) => (
             <motion.div
               key={index}
@@ -53,7 +53,7 @@ export default function RoommateSection() {
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
               whileHover={{ y: -10, transition: { duration: 0.2 } }}
-              className="flex-shrink-0 w-48 glass-card p-6 text-center cursor-pointer"
+              className="flex-shrink-0 w-40 sm:w-48 glass-card p-5 sm:p-6 text-center cursor-pointer"
               style={{
                 boxShadow: `0 8px 32px ${memory.color}30`,
               }}
@@ -82,10 +82,10 @@ export default function RoommateSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="max-w-3xl mx-auto mt-12 text-center"
+          className="max-w-3xl mx-auto mt-8 sm:mt-12 text-center px-4"
         >
           <p 
-            className="font-arabic text-xl sm:text-2xl leading-relaxed"
+            className="font-arabic text-lg sm:text-2xl leading-relaxed"
             style={{ color: "var(--text-secondary)" }}
           >
             &ldquo;من أول أكلات فري فاير في ريبابلك، لخناقات البلكونة، لخناقة المرتبة، لسفرنا، ولكل مصايب السكنات اللي ربنا ما يعيدها.&rdquo;

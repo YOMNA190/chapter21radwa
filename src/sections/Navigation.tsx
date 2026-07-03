@@ -44,12 +44,12 @@ export default function Navigation({ activeSection, scrollTo, mobileMenuOpen, se
             {/* Logo */}
             <motion.button
               onClick={() => scrollTo("home")}
-              className="flex items-center gap-2 font-heading text-xl font-semibold"
+              className="flex items-center gap-2 font-heading text-2xl font-bold"
               style={{ color: "var(--text-primary)" }}
               whileHover={{ scale: 1.05 }}
             >
-              <span>Radwa&apos;s 21</span>
-              <Heart className="w-4 h-4 fill-current" style={{ color: "var(--blush-deep)" }} />
+              <span>Radwa's 21</span>
+              <Heart className="w-5 h-5 fill-current" style={{ color: "var(--blush-deep)" }} />
             </motion.button>
 
             {/* Desktop Nav */}
@@ -89,12 +89,12 @@ export default function Navigation({ activeSection, scrollTo, mobileMenuOpen, se
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 rounded-full hover:bg-white/50"
+              className="md:hidden p-2"
             >
               {mobileMenuOpen ? (
-                <X className="w-6 h-6" style={{ color: "var(--text-primary)" }} />
+                <X className="w-8 h-8" style={{ color: "var(--text-primary)" }} />
               ) : (
-                <Menu className="w-6 h-6" style={{ color: "var(--text-primary)" }} />
+                <Menu className="w-8 h-8" style={{ color: "var(--text-primary)" }} />
               )}
             </button>
           </div>

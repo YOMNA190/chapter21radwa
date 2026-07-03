@@ -48,15 +48,15 @@ export default function MessageWallSection() {
           </h2>
         </motion.div>
 
-        {/* Floating Cards */}
-        <div className="relative h-[500px]">
+        {/* Floating Cards - Grid on Mobile, Absolute on Desktop */}
+        <div className="relative min-h-[400px] lg:h-[500px] flex flex-wrap justify-center gap-4 lg:block">
           {messages.map((message, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30, scale: 0.9 }}
               animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
               transition={{ duration: 0.5, delay: message.delay }}
-              className={`absolute ${message.position}`}
+              className={`relative lg:absolute ${message.position}`}
               style={{
                 animation: `floating ${3 + index * 0.5}s ease-in-out infinite`,
                 animationDelay: `${index * 0.3}s`,
@@ -64,14 +64,14 @@ export default function MessageWallSection() {
             >
               <motion.div
                 whileHover={{ scale: 1.05, rotate: 0 }}
-                className="glass-card px-6 py-4 cursor-pointer"
+                className="glass-card px-4 py-3 sm:px-6 sm:py-4 cursor-pointer"
                 style={{
                   transform: `rotate(${(index % 2 === 0 ? -1 : 1) * (3 + index)}deg)`,
                   borderColor: "rgba(233, 165, 179, 0.3)",
                 }}
               >
                 <p 
-                  className={`font-arabic ${message.size} whitespace-nowrap`}
+                  className={`font-arabic ${message.size} whitespace-normal lg:whitespace-nowrap`}
                   style={{ color: "var(--text-primary)" }}
                 >
                   {message.text}

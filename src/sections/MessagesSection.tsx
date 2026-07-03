@@ -51,7 +51,7 @@ export default function MessagesSection() {
               </h2>
             </motion.div>
 
-            <div className="grid sm:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
               {messages.map((message, index) => (
                 <motion.div
                   key={index}
@@ -59,7 +59,7 @@ export default function MessagesSection() {
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
                   whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                  className="glass-card p-6 relative"
+                  className="glass-card p-5 sm:p-6 relative"
                 >
                   <Quote 
                     className="absolute top-4 right-4 w-8 h-8 opacity-20" 

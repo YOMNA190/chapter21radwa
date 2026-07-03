@@ -63,7 +63,7 @@ export default function AboutSection() {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative h-[400px] sm:h-[500px]"
+            className="relative h-[450px] sm:h-[500px] mt-8 lg:mt-0"
           >
             {polaroids.map((polaroid, index) => (
               <motion.div
@@ -78,9 +78,9 @@ export default function AboutSection() {
                 whileHover={{ scale: 1.05, rotate: 0, zIndex: 10 }}
                 className="polaroid absolute cursor-pointer"
                 style={{
-                  width: index === 1 ? "220px" : "200px",
-                  top: index === 0 ? "20px" : index === 1 ? "120px" : "240px",
-                  left: index === 0 ? "20px" : index === 1 ? "100px" : "60px",
+                  width: index === 1 ? "clamp(180px, 25vw, 220px)" : "clamp(160px, 20vw, 200px)",
+                  top: index === 0 ? "10px" : index === 1 ? "100px" : "200px",
+                  left: index === 0 ? "5%" : index === 1 ? "30%" : "10%",
                   zIndex: index === 1 ? 2 : 1,
                 }}
               >
@@ -100,11 +100,11 @@ export default function AboutSection() {
 
             {/* Decorative tape */}
             <div 
-              className="absolute top-10 left-16 w-16 h-6 -rotate-12 opacity-60"
+              className="absolute top-10 left-[15%] w-16 h-6 -rotate-12 opacity-60"
               style={{ backgroundColor: "var(--blush-pink)" }}
             />
             <div 
-              className="absolute top-32 right-20 w-14 h-5 rotate-6 opacity-60"
+              className="absolute top-32 right-[20%] w-14 h-5 rotate-6 opacity-60"
               style={{ backgroundColor: "var(--blush-light)" }}
             />
           </motion.div>

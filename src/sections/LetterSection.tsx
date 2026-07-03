@@ -35,15 +35,15 @@ export default function LetterSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12"
         >
           <h2 
-            className="font-heading text-4xl sm:text-5xl font-bold text-white mb-3"
+            className="font-heading text-3xl sm:text-5xl font-bold text-white mb-3"
           >
             A Secret Letter
-            <Heart className="inline w-7 h-7 ml-2 fill-current text-pink-300" />
+            <Heart className="inline w-6 h-6 sm:w-7 sm:h-7 ml-2 fill-current text-pink-300" />
           </h2>
-          <p className="text-white/60 text-lg">
+          <p className="text-white/60 text-base sm:text-lg">
             Click the envelope to reveal
           </p>
         </motion.div>
@@ -116,7 +116,7 @@ export default function LetterSection() {
               >
                 {/* Letter paper */}
                 <div 
-                  className="relative rounded-2xl p-8 sm:p-12 shadow-2xl"
+                  className="relative rounded-2xl p-6 sm:p-12 shadow-2xl"
                   style={{ 
                     background: "linear-gradient(135deg, #FFF8F5 0%, #FFF0EB 100%)",
                   }}
@@ -137,7 +137,7 @@ export default function LetterSection() {
                       transition={{ delay: 0.3, duration: 0.5 }}
                     >
                       <pre 
-                        className="font-arabic text-lg sm:text-xl leading-loose whitespace-pre-wrap"
+                        className="font-arabic text-base sm:text-xl leading-relaxed sm:leading-loose whitespace-pre-wrap"
                         style={{ color: "var(--text-primary)" }}
                       >
                         {letterContent}

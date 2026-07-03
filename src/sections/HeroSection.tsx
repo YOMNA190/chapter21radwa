@@ -69,10 +69,10 @@ export default function HeroSection({ scrollY }: HeroSectionProps) {
       />
 
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-screen py-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-screen pt-24 pb-12 lg:py-20">
           
           {/* Left Content */}
-          <div className="order-2 lg:order-1 text-center lg:text-left">
+          <div className="order-1 lg:order-1 text-center lg:text-left">
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -92,7 +92,7 @@ export default function HeroSection({ scrollY }: HeroSectionProps) {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.7 }}
-              className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-4"
+              className="font-heading text-4xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-4"
               style={{ color: "var(--text-primary)" }}
             >
               Happy
@@ -145,7 +145,7 @@ export default function HeroSection({ scrollY }: HeroSectionProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.6 }}
-              className="flex justify-center lg:justify-start gap-3"
+              className="flex justify-center lg:justify-start gap-2 sm:gap-3"
             >
               {[
                 { value: timeLeft.days, label: "Days" },
@@ -158,7 +158,7 @@ export default function HeroSection({ scrollY }: HeroSectionProps) {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1.2 + index * 0.1, duration: 0.5 }}
-                  className="glass-card px-4 py-3 text-center min-w-[70px]"
+                  className="glass-card px-3 py-2 sm:px-4 sm:py-3 text-center min-w-[65px] sm:min-w-[70px]"
                 >
                   <div 
                     className="font-heading text-2xl sm:text-3xl font-bold"
@@ -182,7 +182,7 @@ export default function HeroSection({ scrollY }: HeroSectionProps) {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="order-1 lg:order-2 relative"
+            className="order-2 lg:order-2 relative"
             style={{ transform: `translateY(${parallaxOffset * 0.1}px)` }}
           >
             <div className="relative max-w-md mx-auto lg:max-w-none">

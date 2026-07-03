@@ -116,7 +116,7 @@ export default function SurpriseSection() {
             >
               <motion.button
                 onClick={handleReveal}
-                className="relative w-56 h-56 rounded-full flex flex-col items-center justify-center gap-3 cursor-pointer"
+                className="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full flex flex-col items-center justify-center gap-3 cursor-pointer"
                 style={{
                   background: "linear-gradient(135deg, #E9A5B3, #F5D0D8)",
                   boxShadow: "0 0 60px rgba(233, 165, 179, 0.5)",
@@ -166,13 +166,13 @@ export default function SurpriseSection() {
                 transition={{ delay: 0.3, duration: 0.6 }}
               >
                 <h2 
-                  className="font-heading text-5xl sm:text-6xl font-bold mb-4"
+                  className="font-heading text-4xl sm:text-6xl font-bold mb-4"
                   style={{ color: "var(--text-primary)" }}
                 >
                   Happy 21st Birthday
                   <br />
                   Radwa{" "}
-                  <Heart className="inline w-10 h-10 fill-current" style={{ color: "var(--blush-deep)" }} />
+                  <Heart className="inline w-8 h-8 sm:w-10 sm:h-10 fill-current" style={{ color: "var(--blush-deep)" }} />
                 </h2>
               </motion.div>
 
@@ -204,7 +204,7 @@ export default function SurpriseSection() {
                 <img
                   src="/images/radwa-09.png"
                   alt="Radwa and Yumna"
-                  className="relative w-72 h-auto rounded-3xl shadow-2xl"
+                  className="relative w-64 h-auto sm:w-72 rounded-3xl shadow-2xl"
                 />
                 
                 {/* Floating hearts around image */}

@@ -63,14 +63,14 @@ export default function GallerySection() {
           {/* Navigation Arrows */}
           <button
             onClick={() => scroll("left")}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full glass-card flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full glass-card flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
           >
             <ChevronLeft className="w-6 h-6" style={{ color: "var(--text-primary)" }} />
           </button>
           
           <button
             onClick={() => scroll("right")}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full glass-card flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full glass-card flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
           >
             <ChevronRight className="w-6 h-6" style={{ color: "var(--text-primary)" }} />
           </button>
@@ -78,7 +78,7 @@ export default function GallerySection() {
           {/* Photos Container */}
           <div
             ref={scrollContainerRef}
-            className="flex gap-5 overflow-x-auto scrollbar-hide px-14 py-4"
+            className="flex gap-4 sm:gap-5 overflow-x-auto scrollbar-hide px-4 sm:px-14 py-4"
             style={{ scrollSnapType: "x mandatory", scrollbarWidth: "none" }}
           >
             {allPhotos.map((photo, index) => (
@@ -95,7 +95,7 @@ export default function GallerySection() {
                   <img
                     src={photo}
                     alt={`Memory ${index + 1}`}
-                    className="w-72 h-80 object-cover"
+                    className="w-64 h-72 sm:w-72 sm:h-80 object-cover"
                     loading="lazy"
                   />
                   <div 
