@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 20 100% 98%;
+    --foreground: 340 20% 30%;
+    --card: 0 0% 100%;
+    --card-foreground: 340 20% 30%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 20% 30%;
+    --primary: 350 50% 75%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 20 100% 97%;
+    --secondary-foreground: 340 20% 30%;
+    --muted: 340 20% 95%;
+    --muted-foreground: 340 15% 50%;
+    --accent: 350 50% 75%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 350 30% 88%;
+    --input: 350 30% 88%;
+    --ring: 350 50% 75%;
+    --radius: 0.625rem;
+    
+    /* Custom colors */
+    --blush-pink: #F8D7DA;
+    --blush-deep: #E9A5B3;
+    --blush-light: #FADADD;
+    --cream: #FFF8F5;
+    --cream-warm: #FFF0EB;
+    --text-primary: #5C3D4A;
+    --text-secondary: #8B6B7A;
+    --text-muted: #B8A0AA;
+    --rose-gold: #E9A5B3;
+    --rose-gold-light: #F5D0D8;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--cream);
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-arabic {
+    font-family: 'Cairo', 'IBM Plex Sans Arabic', sans-serif;
+  }
+  
+  .font-heading {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+  }
+  
+  .glass-nav {
+    background: rgba(255, 248, 245, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  
+  .btn-primary {
+    background: linear-gradient(135deg, var(--blush-deep), var(--rose-gold-light));
+    color: white;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(233, 165, 179, 0.3);
+  }
+  
+  .btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 30px rgba(233, 165, 179, 0.5);
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, var(--text-primary), var(--blush-deep));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .polaroid {
+    background: white;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(92, 61, 74, 0.15);
+  }
+  
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 xl:px-12;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  
+  .floating {
+    animation: floating 3s ease-in-out infinite;
+  }
+  
+  .floating-delayed {
+    animation: floating 3s ease-in-out infinite;
+    animation-delay: 1.5s;
+  }
+  
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(233, 165, 179, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(233, 165, 179, 0.7);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
+  }
+}
+
+@layer utilities {
+  .animate-sparkle {
+    animation: sparkle 2s ease-in-out infinite;
+  }
+}
